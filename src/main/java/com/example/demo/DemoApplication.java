@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 
 @RestController
+@CrossOrigin(origins = {"http://localhost:8081/", "https://openshift-web-app-git-coen-de-vries-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com"})
 @RequestMapping("/api")
-@CrossOrigin(allowedHeaders = "*")
 @SpringBootApplication
 public class DemoApplication {
 
