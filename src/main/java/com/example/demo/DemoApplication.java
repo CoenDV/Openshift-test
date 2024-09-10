@@ -12,18 +12,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(allowedHeaders = "*")
 @SpringBootApplication
 public class DemoApplication {
 
-    @CrossOrigin
     @GetMapping
     public String home() {
         System.out.println("hello");
         return "Hello";
     }
 
-
-    @CrossOrigin
     @PostMapping
     public String test() {
         System.out.println("post");
