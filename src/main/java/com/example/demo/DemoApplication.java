@@ -10,9 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class DemoApplication {
 
-    @RequestMapping("/")
+    @GetMapping("/")
     String home() {
+        return "Home";
+    }
+
+    @GetMapping("/hello")
+    String hello() {
         return "Hello World!";
+    }
+
+    @PostMapping("/hello")
+    String helloPost() {
+        return "You just called the POST method at '/hello' endpoint";
     }
 
     public static void main(String[] args) {
