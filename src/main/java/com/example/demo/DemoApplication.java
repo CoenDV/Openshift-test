@@ -17,7 +17,7 @@ public class DemoApplication {
     @GetMapping
     public String home() {
         System.out.println("hello");
-        return "Hello";
+        return "Welcome to the home page!";
     }
 
 
