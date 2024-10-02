@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class DemoApplication {
 
     @GetMapping
-    @CrossOrigin(origins = {"http://localhost:8081", "https://openshift-web-app-git-coen-de-vries-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com"}, allowedHeaders = "*")
+    @CrossOrigin(origins = {"http://localhost:5173", "https://frontend-route-coen-de-vries-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com"}, allowedHeaders = "*")
     public String home() {
         System.out.println("hello");
         return "Welcome to the home page!";
     }
 
     @PostMapping
-    @CrossOrigin(origins = {"http://localhost:8081", "https://openshift-web-app-git-coen-de-vries-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com"}, allowedHeaders = "*")
+    @CrossOrigin(origins = {"http://localhost:5173", "https://frontend-route-coen-de-vries-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com"}, allowedHeaders = "*")
     public String test() {
         System.out.println("post");
         return "Test Post";
